@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>六年期壽險商品佣金率大解析</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/night.css" />
+  <style>
+    :root {
+      --accent:  #e8643a;   /* 橘紅 */
+      --accent2: #4fc3f7;   /* 青色 */
+      --success: #81c784;   /* 綠色 */
+      --warn:    #ffb74d;   /* 琥珀色 */
+      --highlight: #ff5252; /* 鮮紅高亮 */
+    }
+
+    .reveal {
+      font-family: 'Segoe UI', 'Noto Sans TC', sans-serif;
+    }
+    .reveal h1, .reveal h2, .reveal h3 {
+      font-family: 'Segoe UI', 'Noto Sans TC', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .reveal h1 { font-size: 2.0em; line-height: 1.2; }
+    .reveal h2 { font-size: 1.4em; color: var(--accent2); margin-bottom: 0.5em; }
+    .reveal h3 { font-size: 1.0em; color: #fff; }
+    .reveal .progress { color: var(--accent); }
+    
+    /* === Tables style === */
+    .reveal table {
+      font-size: 0.45em;
+      border-collapse: collapse;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .reveal table th {
+      background: rgba(79, 195, 247, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--accent2);
+      font-weight: bold;
+      text-align: center;
+      padding: 6px 10px;
+    }
+    .reveal table td {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 4px 8px;
+      text-align: center;
+    }
+    .reveal table tr:nth-child(even) {
+      background: rgba(255, 255, 255, 0.03);
+    }
+    
+    /* === Highlighting === */
+    .highlight-row {
+      background: rgba(255, 82, 82, 0.1) !important;
+    }
+    .highlight-text {
+      color: var(--highlight) !important;
+      font-weight: bold !important;
+    }
+    
+    /* === Cover === */
+    .title-slide { text-align: center; }
+    .title-slide .tag {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 0.5em;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.0em;
+      font-weight: 600;
+    }
+    .title-slide .subtitle { font-size: 0.7em; color: #ccc; margin-top: 0.5em; }
+    .title-slide .author { margin-top: 1.8em; font-size: 0.45em; color: #999; }
+    
+    /* === Stat cards === */
+    .stat-row { display: flex; gap: 15px; justify-content: center; margin-top: 0.6em; }
+    .stat-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      padding: 12px 18px;
+      text-align: center;
+      flex: 1;
+    }
+    .stat-card .num { font-size: 1.5em; font-weight: 800; color: var(--accent2); line-height: 1.1; }
+    .stat-card .num.highest { color: var(--highlight); }
+    .stat-card .company { font-size: 0.4em; color: #aaa; margin-top: 4px; }
+    .stat-card .label { font-size: 0.45em; font-weight: bold; color: #fff; margin-top: 6px; }
+
+    /* === Slide footer/header === */
+    .slide-footer {
+      position: absolute;
+      bottom: 20px;
+      left: 30px;
+      font-size: 0.35em;
+      color: #777;
+    }
+    
+    .scrollable-slide-container {
+      max-height: 520px;
+      overflow-y: auto;
+      padding-right: 5px;
+    }
+    /* Scrollbar style */
+    .scrollable-slide-container::-webkit-scrollbar {
+      width: 6px;
+    }
+    .scrollable-slide-container::-webkit-scrollbar-track {
+      background: rgba(255,255,255,0.02);
+    }
+    .scrollable-slide-container::-webkit-scrollbar-thumb {
+      background: rgba(79, 195, 247, 0.3);
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!-- Slide 1: Cover -->
+    <section data-background-image="images/cover.jpg" data-background-opacity="0.35" data-background-size="cover">
+      <div class="title-slide">
+        <div class="tag">問大師家族辦公室 · 財務規劃專題</div>
+        <h1>六年期壽險商品<br/>佣金率大解析</h1>
+        <p class="subtitle">五大壽險公司 6 年期商品首年佣金與續期利益比較</p>
+        <p class="author">分析團隊：Antigravity | 報告日期：2026年7月</p>
+      </div>
+    </section>
+
+    <!-- Slide 2: VIZ Comparison -->
+    <section>
+      <h2>跨公司六年期首年實際佣金率對決</h2>
+      <p style="font-size: 0.45em; color: #aaa; margin-top: -10px;">初年度服務報酬率 (FYC%) = 業績換算率 × 40%</p>
+      <div class="stat-row">
+        <div class="stat-card">
+          <div class="company">遠雄人壽 (最高)</div>
+          <div class="num highest">22.80%</div>
+          <div class="label">傳富美樂富美元壽險</div>
+        </div>
+        <div class="stat-card">
+          <div class="company">全球人壽</div>
+          <div class="num">19.60%</div>
+          <div class="label">鑫億68美元壽險</div>
+        </div>
+        <div class="stat-card">
+          <div class="company">元大人壽</div>
+          <div class="num">18.80%</div>
+          <div class="label">百富美元壽險</div>
+        </div>
+        <div class="stat-card">
+          <div class="company">保誠人壽</div>
+          <div class="num">16.00%</div>
+          <div class="label">美聯人生美元定期壽險</div>
+        </div>
+        <div class="stat-card">
+          <div class="company">安達人壽</div>
+          <div class="num">13.20%</div>
+          <div class="label">紅運旺旺分紅壽險</div>
+        </div>
+      </div>
+      <div style="margin-top: 1.2em; font-size: 0.45em; color: #ccc; line-height: 1.6; text-align: left; padding: 0 40px;">
+        <ul>
+          <li>🏆 <strong>全場最高</strong>：<span class="highlight-text">遠雄人壽 - 傳富美樂富美元利率變動型終身壽險 (BR1)</span> 實際首年佣金率達 <strong>22.80%</strong>，初年度業績換算率為 57.00%。</li>
+          <li>📊 <strong>分佈特性</strong>：相比三年期商品（最高 13.20%），六年期商品的首年實際佣金率大幅提昇，最高區間落於 13.20% ~ 22.80% 之間。</li>
+        </ul>
+      </div>
+      <div class="slide-footer">問大師家族辦公室 - 六年期壽險商品佣金率分析</div>
+    </section>
+
+    <!-- Slide 3: Prudential -->
+    <section>
+      <h2>保誠人壽 6年期商品佣金表</h2>
+      <div class="scrollable-slide-container">
+        <table>
+          <thead>
+            <tr>
+              <th>商品名稱</th>
+              <th>代號</th>
+              <th>起賣日</th>
+              <th>年齡</th>
+              <th>年期</th>
+              <th>業績換算率</th>
+              <th>首年實際(FYC%)</th>
+              <th>續2</th>
+              <th>續3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>享扶利終身壽險(定額給付型)</td>
+              <td><code>ARLPN003</code></td>
+              <td>2026/04/13</td>
+              <td>-</td>
+              <td>6</td>
+              <td>27.00%</td>
+              <td>10.80%</td>
+              <td>1.60%</td>
+              <td>0.80%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>金世代終身壽險(定額給付型)</td>
+              <td><code>BRLPLN8</code></td>
+              <td>2024/09/30</td>
+              <td>-</td>
+              <td>6</td>
+              <td>27.00%</td>
+              <td>10.80%</td>
+              <td>1.60%</td>
+              <td>0.80%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>金會旺終身保險(113)(定期給付型)</td>
+              <td><code>ACLPEN32</code></td>
+              <td>2024/09/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td>21.00%</td>
+              <td>8.40%</td>
+              <td>1.60%</td>
+              <td>0.80%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>金寶貝終身壽險(定額給付型)</td>
+              <td><code>ARLPLN25</code></td>
+              <td>2026/02/09</td>
+              <td>-</td>
+              <td>6</td>
+              <td>23.00%</td>
+              <td>9.20%</td>
+              <td>1.60%</td>
+              <td>0.80%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>福安滿利終身壽險(113)(定期給付型)</td>
+              <td><code>ARLPLN10</code></td>
+              <td>2024/07/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td>19.00%</td>
+              <td>7.60%</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>安家豁免保險費附約(96)</td>
+              <td><code>JWPC</code></td>
+              <td>2024/09/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td>16.00%</td>
+              <td>6.40%</td>
+              <td>2.40%</td>
+              <td>2.40%</td>
+            </tr>
+            <tr class='highlight-row'>
+              <td style='text-align: left; font-weight: bold;'>喜樂定期壽險附約</td>
+              <td><code>BNLTRN1</code></td>
+              <td>2024/09/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td class='highlight-text'>40.00%</td>
+              <td class='highlight-text'>16.00%</td>
+              <td>9.00%</td>
+              <td>5.00%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>關心豁免保險費附約(96)</td>
+              <td><code>IWPD</code></td>
+              <td>2024/09/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td>16.00%</td>
+              <td>6.40%</td>
+              <td>2.40%</td>
+              <td>2.40%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>六年鑽外幣終身保險(定期給付型)</td>
+              <td><code>ACLPEU27</code></td>
+              <td>2025/05/12</td>
+              <td>-</td>
+              <td>6</td>
+              <td>21.00%</td>
+              <td>8.40%</td>
+              <td>1.60%</td>
+              <td>0.80%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>美滿傳家外幣終身壽險(定期給付型)</td>
+              <td><code>ARLPLU30</code></td>
+              <td>2024/09/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td>31.00%</td>
+              <td>12.40%</td>
+              <td>0.80%</td>
+              <td>0.40%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>新美康滿利外幣終身壽險(定期給付型)</td>
+              <td><code>ARLPLU57</code></td>
+              <td>2025/07/15</td>
+              <td>-</td>
+              <td>6</td>
+              <td>31.00%</td>
+              <td>12.40%</td>
+              <td>0.40%</td>
+              <td>0.40%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>新美滿相傳外幣終身壽險(定期給付型)</td>
+              <td><code>ARLPLU71</code></td>
+              <td>2025/08/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td>36.00%</td>
+              <td>14.40%</td>
+              <td>0.80%</td>
+              <td>0.80%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>鑫傳富外幣終身壽險(定額給付型)</td>
+              <td><code>ARLPLU64</code></td>
+              <td>2025/05/12</td>
+              <td>-</td>
+              <td>6</td>
+              <td>39.00%</td>
+              <td>15.60%</td>
+              <td>0.80%</td>
+              <td>0.80%</td>
+            </tr>
+            <tr class='highlight-row'>
+              <td style='text-align: left; font-weight: bold;'>美滿人生美元定期壽險附約</td>
+              <td><code>BNLTRU1</code></td>
+              <td>2024/09/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td class='highlight-text'>40.00%</td>
+              <td class='highlight-text'>16.00%</td>
+              <td>9.00%</td>
+              <td>5.00%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>美滿美元豁免保險費保險附約甲型</td>
+              <td><code>CWPNTR3</code></td>
+              <td>2025/01/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td>14.00%</td>
+              <td>5.60%</td>
+              <td>2.40%</td>
+              <td>2.40%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>美滿美元豁免保險費健康保險附約乙型</td>
+              <td><code>CWPNTR4</code></td>
+              <td>2025/01/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td>14.00%</td>
+              <td>5.60%</td>
+              <td>2.40%</td>
+              <td>2.40%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>豁元乙美元豁免保險費健康保險附約</td>
+              <td><code>BWPNTR2</code></td>
+              <td>2024/09/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td>16.00%</td>
+              <td>6.40%</td>
+              <td>2.40%</td>
+              <td>2.40%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>豁元甲美元豁免保險費保險附約</td>
+              <td><code>BWPNTR1</code></td>
+              <td>2024/09/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td>16.00%</td>
+              <td>6.40%</td>
+              <td>2.40%</td>
+              <td>2.40%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="slide-footer">保誠人壽共 18 款 6年期商品，其中 BNLTRU1 最高佣金率達 16.00%</div>
+    </section>
+
+    <!-- Slide 4: Yuanta -->
+    <section>
+      <h2>元大人壽 6年期商品佣金表</h2>
+      <div class="scrollable-slide-container">
+        <table>
+          <thead>
+            <tr>
+              <th>商品名稱</th>
+              <th>代號</th>
+              <th>起賣日</th>
+              <th>年齡</th>
+              <th>年期</th>
+              <th>業績換算率</th>
+              <th>首年實際(FYC%)</th>
+              <th>續2</th>
+              <th>續3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>元大金旺利率變動型終身壽險</td>
+              <td><code>LE</code></td>
+              <td>2024/09/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td>11.00%</td>
+              <td>4.40%</td>
+              <td>2.40%</td>
+              <td>2.40%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>元滿富利率變動型終身壽險</td>
+              <td><code>JZ</code></td>
+              <td>2024/12/04</td>
+              <td>-</td>
+              <td>6</td>
+              <td>33.00%</td>
+              <td>13.20%</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>元滿鑽多利率變動型終身壽險</td>
+              <td><code>JF</code></td>
+              <td>2024/09/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td>17.00%</td>
+              <td>6.80%</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>永傳經典終身壽險</td>
+              <td><code>LB</code></td>
+              <td>2024/09/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td>24.00%</td>
+              <td>9.60%</td>
+              <td>6.50%</td>
+              <td>2.40%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>真億達利率變動型終身壽險</td>
+              <td><code>JY</code></td>
+              <td>2024/09/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td>31.00%</td>
+              <td>12.40%</td>
+              <td>0.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>鑫達利率變動型增額終身壽險</td>
+              <td><code>LL</code></td>
+              <td>2021/02/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td>22.00%</td>
+              <td>8.80%</td>
+              <td>0.50%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>新真心豁免保險費附約</td>
+              <td><code>WQ</code></td>
+              <td>2024/09/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td>24.00%</td>
+              <td>9.60%</td>
+              <td>4.00%</td>
+              <td>4.00%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>元大臻旺美元利率變動型終身壽險</td>
+              <td><code>WO</code></td>
+              <td>2024/09/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td>24.00%</td>
+              <td>9.60%</td>
+              <td>4.00%</td>
+              <td>4.00%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>元傳富美元利率變動型終身壽險</td>
+              <td><code>QF</code></td>
+              <td>2024/09/26</td>
+              <td>-</td>
+              <td>6</td>
+              <td>43.00%</td>
+              <td>17.20%</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>日優寶日圓利率變動型終身壽險</td>
+              <td><code>BN</code></td>
+              <td>2025/11/27</td>
+              <td>0~99</td>
+              <td>6</td>
+              <td>42.00%</td>
+              <td>16.80%</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr class='highlight-row'>
+              <td style='text-align: left; font-weight: bold;'>百富美元利率變動型終身壽險</td>
+              <td><code>BF</code></td>
+              <td>2025/10/16</td>
+              <td>-</td>
+              <td>6</td>
+              <td class='highlight-text'>47.00%</td>
+              <td class='highlight-text'>18.80%</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>享美年美元利率變動型增額還本終身保險</td>
+              <td><code>QU</code></td>
+              <td>2024/09/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td>27.00%</td>
+              <td>10.80%</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>承億達美元利率變動型終身壽險</td>
+              <td><code>KY</code></td>
+              <td>2024/09/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td>26.00%</td>
+              <td>10.40%</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>旺傳富美元利率變動型終身壽險</td>
+              <td><code>BT</code></td>
+              <td>2025/04/15</td>
+              <td>-</td>
+              <td>6</td>
+              <td>42.00%</td>
+              <td>16.80%</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>金美寶美元利率變動型終身壽險</td>
+              <td><code>BE</code></td>
+              <td>2025/04/09</td>
+              <td>0~70</td>
+              <td>6</td>
+              <td>37.00%</td>
+              <td>14.80%</td>
+              <td>0.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>金美寶美元利率變動型終身壽險</td>
+              <td><code>BE</code></td>
+              <td>2025/04/09</td>
+              <td>71~79</td>
+              <td>6</td>
+              <td>33.00%</td>
+              <td>13.20%</td>
+              <td>0.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>金傳家美元利率變動型終身壽險</td>
+              <td><code>QT</code></td>
+              <td>2026/01/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td>43.00%</td>
+              <td>17.20%</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>美利倍傳美元利率變動型終身壽險</td>
+              <td><code>QV</code></td>
+              <td>2024/09/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td>28.00%</td>
+              <td>11.20%</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>美旺達美元利率變動型增額終身壽險</td>
+              <td><code>QM</code></td>
+              <td>2024/09/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td>35.00%</td>
+              <td>14.00%</td>
+              <td>0.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>龍億達美元利率變動型終身壽險</td>
+              <td><code>KO</code></td>
+              <td>2024/12/18</td>
+              <td>-</td>
+              <td>6</td>
+              <td>43.00%</td>
+              <td>17.20%</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>鑫優利美元利率變動型終身壽險</td>
+              <td><code>QZ</code></td>
+              <td>2022/12/14</td>
+              <td>-</td>
+              <td>6</td>
+              <td>19.00%</td>
+              <td>7.60%</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>新美心美元豁免保險費附約</td>
+              <td><code>WN</code></td>
+              <td>2024/09/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td>24.00%</td>
+              <td>9.60%</td>
+              <td>4.00%</td>
+              <td>4.00%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>大利元滿變額萬能壽險</td>
+              <td><code>WM</code></td>
+              <td>2024/09/01</td>
+              <td>-</td>
+              <td>6</td>
+              <td>24.00%</td>
+              <td>9.60%</td>
+              <td>4.00%</td>
+              <td>4.00%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="slide-footer">元大人壽共 23 款 6年期商品，其中 BF (百富美元) 最高佣金率達 18.80%</div>
+    </section>
+
+    <!-- Slide 5: TransGlobe, Chubb & Farglory -->
+    <section>
+      <h2>全球、安達、遠雄 6年期商品佣金表</h2>
+      <div class="scrollable-slide-container">
+        <!-- TransGlobe -->
+        <h3 style="text-align: left; margin-top: 10px; color: var(--accent2);">全球人壽</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>商品名稱</th>
+              <th>代號</th>
+              <th>起賣日</th>
+              <th>年期</th>
+              <th>業績換算率</th>
+              <th>首年實際(FYC%)</th>
+              <th>續2</th>
+              <th>續3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>88鑫傳承利率變動型終身壽險(定額給付型)</td>
+              <td><code>QDW</code></td>
+              <td>2024/09/01</td>
+              <td>6</td>
+              <td>28.00%</td>
+              <td>11.20%</td>
+              <td>0.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>台富88利率變動型終身壽險(定額給付型)</td>
+              <td><code>QPW</code></td>
+              <td>2025/03/03</td>
+              <td>6</td>
+              <td>23.00%</td>
+              <td>9.20%</td>
+              <td>0.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>年年有利利率變動型還本終身保險(定額給付型)</td>
+              <td><code>QJP</code></td>
+              <td>2025/01/22</td>
+              <td>6</td>
+              <td>18.00%</td>
+              <td>7.20%</td>
+              <td>0.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>青春無距傷害保險</td>
+              <td><code>APC</code></td>
+              <td>2024/09/01</td>
+              <td>6</td>
+              <td>27.00%</td>
+              <td>10.80%</td>
+              <td>6.50%</td>
+              <td>6.50%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>厚利安小額終身壽險(110)</td>
+              <td><code>LWL</code></td>
+              <td>2024/09/01</td>
+              <td>6</td>
+              <td>8.50%</td>
+              <td>3.40%</td>
+              <td>0.50%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>意定罩傷害保險</td>
+              <td><code>APB</code></td>
+              <td>2025/08/11</td>
+              <td>6</td>
+              <td>28.00%</td>
+              <td>11.20%</td>
+              <td>4.80%</td>
+              <td>4.80%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>豪享樂退利率變動型終身壽險(定額給付型)</td>
+              <td><code>QMS</code></td>
+              <td>2024/11/25</td>
+              <td>6~11</td>
+              <td>31.00%</td>
+              <td>12.40%</td>
+              <td>0.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>豪威六六利率變動型終身壽險(定額給付型)</td>
+              <td><code>QBW</code></td>
+              <td>2024/09/01</td>
+              <td>6</td>
+              <td>35.00%</td>
+              <td>14.00%</td>
+              <td>0.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>豪鑫368利率變動型終身壽險(定額給付型)</td>
+              <td><code>QVW</code></td>
+              <td>2025/04/21</td>
+              <td>6</td>
+              <td>39.00%</td>
+              <td>15.60%</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>鑫滿富足利率變動型增額終身壽險(定額給付型)</td>
+              <td><code>QHD</code></td>
+              <td>2024/09/01</td>
+              <td>6</td>
+              <td>17.00%</td>
+              <td>6.80%</td>
+              <td>0.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>(國際)新全美利利率變動型美元終身壽險</td>
+              <td><code>OIC</code></td>
+              <td>2024/09/01</td>
+              <td>6</td>
+              <td>23.00%</td>
+              <td>9.20%</td>
+              <td>1.50%</td>
+              <td>0.50%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>88美傳承利率變動型美元終身壽險(定額給付型)</td>
+              <td><code>FDW</code></td>
+              <td>2024/09/01</td>
+              <td>6</td>
+              <td>38.00%</td>
+              <td>15.20%</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>金美美利多利率變動型美元還本終身保險(定額給付型)</td>
+              <td><code>FJP</code></td>
+              <td>2024/07/22</td>
+              <td>6</td>
+              <td>21.00%</td>
+              <td>8.40%</td>
+              <td>0.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>美利樂沛利率變動型美元還本終身保險(定額給付型)</td>
+              <td><code>FMP</code></td>
+              <td>2024/11/25</td>
+              <td>6</td>
+              <td>31.00%</td>
+              <td>12.40%</td>
+              <td>5.00%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>美富88利率變動型美元終身壽險(定額給付型)</td>
+              <td><code>FYW</code></td>
+              <td>2025/03/31</td>
+              <td>6</td>
+              <td>43.00%</td>
+              <td>17.20%</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>美滿樂退利率變動型美元終身壽險(定額給付型)</td>
+              <td><code>FMS</code></td>
+              <td>2025/09/01</td>
+              <td>6~11</td>
+              <td>37.00%</td>
+              <td>14.80%</td>
+              <td>0.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>豪美368利率變動型美元終身壽險(定額給付型)</td>
+              <td><code>FVW</code></td>
+              <td>2025/04/21</td>
+              <td>6</td>
+              <td>45.00%</td>
+              <td>18.00%</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>豪美樂利利率變動型美元終身壽險(定額給付型)</td>
+              <td><code>FKD</code></td>
+              <td>2025/11/24</td>
+              <td>6</td>
+              <td>22.00%</td>
+              <td>8.80%</td>
+              <td>0.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>豪神六六利率變動型美元終身壽險(定額給付型)</td>
+              <td><code>FBW</code></td>
+              <td>2024/09/01</td>
+              <td>6</td>
+              <td>47.00%</td>
+              <td>18.80%</td>
+              <td>0.80%</td>
+              <td>-</td>
+            </tr>
+            <tr class='highlight-row'>
+              <td style='text-align: left; font-weight: bold;'>鑫億68利率變動型美元終身壽險(定額給付型)</td>
+              <td><code>F8W</code></td>
+              <td>2026/04/13</td>
+              <td>6</td>
+              <td class='highlight-text'>49.00%</td>
+              <td class='highlight-text'>19.60%</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>美元豁免保險費健康保險附約</td>
+              <td><code>F18</code></td>
+              <td>2024/09/01</td>
+              <td>6~9</td>
+              <td>19.00%</td>
+              <td>7.60%</td>
+              <td>0.50%</td>
+              <td>0.50%</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Chubb -->
+        <h3 style="text-align: left; margin-top: 20px; color: var(--accent2);">安達人壽</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>商品名稱</th>
+              <th>代號</th>
+              <th>起賣日</th>
+              <th>年期</th>
+              <th>業績換算率</th>
+              <th>首年實際(FYC%)</th>
+              <th>續2</th>
+              <th>續3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>金多美美元利率變動型終身壽險</td>
+              <td><code>6RPISWLB</code></td>
+              <td>2024/09/01</td>
+              <td>6</td>
+              <td>21.00%</td>
+              <td>8.40%</td>
+              <td>0.80%</td>
+              <td>-</td>
+            </tr>
+            <tr class='highlight-row'>
+              <td style='text-align: left; font-weight: bold;'>紅運旺旺美元分紅終身壽險</td>
+              <td><code>6PARWLSLD</code></td>
+              <td>2024/12/07</td>
+              <td>6</td>
+              <td class='highlight-text'>33.00%</td>
+              <td class='highlight-text'>13.20%</td>
+              <td>1.20%</td>
+              <td>0.80%</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Farglory -->
+        <h3 style="text-align: left; margin-top: 20px; color: var(--accent2);">遠雄人壽 (已剔除豁免商品)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>商品名稱</th>
+              <th>代號</th>
+              <th>起賣日</th>
+              <th>年期</th>
+              <th>業績換算率</th>
+              <th>首年實際(FYC%)</th>
+              <th>續2</th>
+              <th>續3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>全家保小額終身壽險(111)</td>
+              <td><code>LM5</code></td>
+              <td>2026/01/01</td>
+              <td>6</td>
+              <td>16.00%</td>
+              <td>6.40%</td>
+              <td>0.50%</td>
+              <td>0.50%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>美滿金永樂利率變動型增額終身壽險</td>
+              <td><code>WJ1</code></td>
+              <td>2024/09/01</td>
+              <td>6</td>
+              <td>15.00%</td>
+              <td>6.00%</td>
+              <td>0.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>美滿金享優2利率變動型增額終身壽險</td>
+              <td><code>WU1</code></td>
+              <td>2025/10/31</td>
+              <td>6</td>
+              <td>23.00%</td>
+              <td>9.20%</td>
+              <td>0.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>富貴喜相逢利率變動型終身還本保險</td>
+              <td><code>WI1</code></td>
+              <td>2024/09/01</td>
+              <td>6</td>
+              <td>12.00%</td>
+              <td>4.80%</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>傳富倍多紛利率變動型終身壽險</td>
+              <td><code>WG1</code></td>
+              <td>2024/09/01</td>
+              <td>6</td>
+              <td>23.00%</td>
+              <td>9.20%</td>
+              <td>0.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>傳富新終身壽險(110)</td>
+              <td><code>FI5</code></td>
+              <td>2024/09/01</td>
+              <td>6</td>
+              <td>20.00%</td>
+              <td>8.00%</td>
+              <td>1.50%</td>
+              <td>0.50%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>傳富聚鑫利率變動型終身壽險</td>
+              <td><code>WH1</code></td>
+              <td>2024/09/01</td>
+              <td>6</td>
+              <td>25.00%</td>
+              <td>10.00%</td>
+              <td>0.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>新定期壽險(110)</td>
+              <td><code>FD6</code></td>
+              <td>2024/09/01</td>
+              <td>6</td>
+              <td>19.00%</td>
+              <td>7.60%</td>
+              <td>1.50%</td>
+              <td>1.50%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>新美滿致富增額終身壽險</td>
+              <td><code>LN1</code></td>
+              <td>2024/09/01</td>
+              <td>6</td>
+              <td>7.00%</td>
+              <td>2.80%</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>新意大力終身傷害保險</td>
+              <td><code>XJ1</code></td>
+              <td>2024/09/01</td>
+              <td>6</td>
+              <td>23.00%</td>
+              <td>9.20%</td>
+              <td>12.00%</td>
+              <td>12.00%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>金好心豁免保險費附約</td>
+              <td><code>HF1</code></td>
+              <td>2024/09/01</td>
+              <td>5~9</td>
+              <td>12.00%</td>
+              <td>4.80%</td>
+              <td>1.50%</td>
+              <td>0.80%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>意醫非凡傷害醫療定期保險附約</td>
+              <td><code>XK1</code></td>
+              <td>2024/09/01</td>
+              <td>6</td>
+              <td>24.00%</td>
+              <td>9.60%</td>
+              <td>12.00%</td>
+              <td>12.00%</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>傳富美67美元利率變動型終身壽險</td>
+              <td><code>BX1</code></td>
+              <td>2026/03/13</td>
+              <td>6</td>
+              <td>54.00%</td>
+              <td>21.60%</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr class='highlight-row'>
+              <td style='text-align: left; font-weight: bold;'>傳富美樂富美元利率變動型終身壽險</td>
+              <td><code>BR1</code></td>
+              <td>2026/02/06</td>
+              <td>6</td>
+              <td class='highlight-text'>57.00%</td>
+              <td class='highlight-text'>22.80%</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>傳富美樂福美元利率變動型終身壽險</td>
+              <td><code>BJ1</code></td>
+              <td>2025/04/09</td>
+              <td>6</td>
+              <td>53.00%</td>
+              <td>21.20%</td>
+              <td>2.40%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>傳富勝達美元利率變動型終身壽險</td>
+              <td><code>BU1</code></td>
+              <td>2026/02/26</td>
+              <td>6</td>
+              <td>38.00%</td>
+              <td>15.20%</td>
+              <td>0.80%</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td style='text-align: left; font-weight: bold;'>傳富聚匯美元利率變動型終身壽險</td>
+              <td><code>SP1</code></td>
+              <td>2024/09/01</td>
+              <td>6</td>
+              <td>20.00%</td>
+              <td>8.00%</td>
+              <td>0.80%</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="slide-footer">各公司旗下最高佣金率項目均以紅字高亮標記，遠雄人壽 BR1 22.80% 奪冠</div>
+    </section>
+
+    <!-- Slide 6: Conclusion -->
+    <section data-background-image="images/ending.jpg" data-background-opacity="0.35" data-background-size="cover">
+      <div class="end-slide">
+        <h1 style="color:var(--accent2); margin-bottom: 0.5em;">家族辦公室六年期財務洞察</h1>
+        <div style="font-size: 0.55em; color: #ddd; text-align: left; padding: 0 50px; line-height: 1.8;">
+          <ul>
+            <li>💎 <strong>首年佣金率冠軍</strong>：<span class="highlight-text">遠雄人壽 傳富美樂富 (BR1)</span> 以 <strong>22.80%</strong> 的首年實際佣金率傲視全場。</li>
+            <li>💼 <strong>強勢競爭品牌</strong>：<span style="color:var(--accent2);">全球人壽 鑫億68 (F8W)</span> 佣金率 19.60% 以及 <span style="color:var(--accent2);">元大人壽 百富 (BF)</span> 18.80% 亦是極佳的資產規劃配置選項。</li>
+            <li>🛡️ <strong>續期利益與穩定性</strong>：六年期商品提供更長的續期報酬期，適合做為保險信託與家族財富傳承的長期核心配置。</li>
+          </ul>
+        </div>
+        <p class="tagline" style="margin-top: 1.5em; font-size: 0.6em; color: #999;">— 精準配置 · 穩健傳承 —</p>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    transition: 'slide',
+    transitionSpeed: 'default',
+    backgroundTransition: 'fade',
+    center: true,
+    progress: true,
+    controls: true,
+    slideNumber: 'c/t',
+    plugins: []
+  });
+</script>
+</body>
+</html>
